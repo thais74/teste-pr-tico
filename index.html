@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Corretor</title>
+</head>
+<body>
+    <h2>Cadastro de Corretor</h2>
+    <form action="processar.php" method="POST">
+        <label>CPF:</label>
+        <input type="text" name="cpf" required minlength="11" maxlength="11" pattern="\d{11}"><br>
+        
+        <label>Creci:</label>
+        <input type="text" name="creci" required minlength="2"><br>
+        
+        <label>Nome:</label>
+        <input type="text" name="nome" required minlength="2"><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Tabela de Corretores -->
+    <?php include 'processar.php'; ?>
+</body>
+</html>
