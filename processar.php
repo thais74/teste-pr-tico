@@ -1,6 +1,14 @@
 <?php
 include 'conexao.php';
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+    http_response_code(405);
+    die("Método não permitido");
+}
+
 // Processamento de Cadastro
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cpf = $_POST['cpf'];
